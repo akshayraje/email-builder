@@ -1,0 +1,160 @@
+<!-- Widget Social -->
+
+<script type="text/html" id="template-html-social">
+  <div class="content-ui-wrapper" data-type="content" data-name="social"  id="{{id}}">
+  <table class="wrapper" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td style="text-align: center;padding-top: 10px; padding-right: 0; padding-bottom: 10px; padding-left: 0;" class="logo">
+      <a href="" target="_blank" data-type="social-logo" data-content="facebook">
+        <img width="30" style="margin:0 5px" src="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/facebook_v3.png">
+      </a>
+      <a href="" target="_blank" data-type="social-logo" data-content="instagram">
+        <img width="30" style="margin:0 5px" src="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/instagram_v3.png">
+      </a>
+      <a href="" target="_blank" data-type="social-logo" data-content="twitter">
+        <img width="30" style="margin:0 5px" src="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/twitter_v3.png">
+      </a>
+  </td></tr></table>
+  </div>
+</script>
+
+<script type="text/html" id="editor-social">
+  <h3 class="title"><%= I18n.t 'template_tool.controls_social_lbl' %></h3>
+
+  <div class="tabs">
+
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#controls-editor-content" aria-controls="home" role="tab" data-toggle="tab"><%= I18n.t 'template_tool.content_lbl' %></a></li>
+      <li role="presentation">
+        <a href="#controls-editor-style" aria-controls="profile" role="tab" data-toggle="tab"><%= I18n.t 'template_tool.style_lbl' %></a></li>
+    </ul>
+
+    <div class="tab-content layout-content">
+
+      <div role="tabpanel" class="tab-pane active content" id="controls-editor-content">
+
+        <div class="builder-form-group row">
+          <div class="col-xs-12" data-type="logo-style" data-content="logo">
+            <span class="pepo-icon facebook-logo social-logo" data-type="social-logo" data-content="facebook" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/facebook_v3.png"><span class="pepo-icon"></span></span></span>
+            <span class="pepo-icon instagram-logo social-logo" data-type="social-logo" data-content="instagram" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/instagram_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon medium-logo social-logo" data-type="social-logo" data-content="medium" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/medium_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon youtube-logo social-logo" data-type="social-logo" data-content="youtube" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/youtube_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon linkedin-logo social-logo" data-type="social-logo" data-content="linkedin" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/linkedin_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon twitter-logo social-logo" data-type="social-logo" data-content="twitter" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/twitter_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon pintrest-logo social-logo" data-type="social-logo" data-content="pintrest" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/pinterest_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon gplus-logo social-logo" data-type="social-logo" data-content="gplus" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/gplus_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon website-logo social-logo" data-type="social-logo" data-content="website" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/website_v3.png"><span class="pepo-icon"></span></span>
+          </div>
+          <div class="col-xs-12" data-type="logo-style" data-content="bw-logo">
+            <span class="pepo-icon facebook-bw-logo social-logo" data-type="social-logo" data-content="facebook" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/facebook_bw_v3.png"><span class="pepo-icon"></span></span></span>
+            <span class="pepo-icon instagram-bw-logo social-logo" data-type="social-logo" data-content="instagram" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/instagram_bw_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon medium-bw-logo social-logo" data-type="social-logo" data-content="medium" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/medium_bw_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon youtube-bw-logo social-logo" data-type="social-logo" data-content="youtube" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/youtube_bw_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon linkedin-bw-logo social-logo" data-type="social-logo" data-content="linkedin" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/linkedin_bw_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon twitter-bw-logo social-logo" data-type="social-logo" data-content="twitter" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/twitter_bw_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon pintrest-bw-logo social-logo" data-type="social-logo" data-content="pintrest" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/pinterest_bw_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon gplus-bw-logo social-logo" data-type="social-logo" data-content="gplus" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/gplus_bw_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon website-bw-logo social-logo" data-type="social-logo" data-content="website" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/website_bw_v3.png"><span class="pepo-icon"></span></span>
+          </div>
+          <div class="col-xs-12" data-type="logo-style" data-content="wb-logo">
+            <span class="pepo-icon facebook-wb-logo social-logo" data-type="social-logo" data-content="facebook" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/facebook_wb_v3.png"><span class="pepo-icon"></span></span></span>
+            <span class="pepo-icon instagram-wb-logo social-logo" data-type="social-logo" data-content="instagram" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/instagram_wb_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon medium-wb-logo social-logo" data-type="social-logo" data-content="medium" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/medium_wb_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon youtube-wb-logo social-logo" data-type="social-logo" data-content="youtube" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/youtube_wb_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon linkedin-wb-logo social-logo" data-type="social-logo" data-content="linkedin" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/linkedin_wb_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon twitter-wb-logo social-logo" data-type="social-logo" data-content="twitter" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/twitter_wb_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon pintrest-wb-logo social-logo" data-type="social-logo" data-content="pintrest" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/pinterest_wb_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon gplus-wb-logo social-logo" data-type="social-logo" data-content="gplus" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/gplus_wb_v3.png"><span class="pepo-icon"></span></span>
+            <span class="pepo-icon website-wb-logo social-logo" data-type="social-logo" data-content="website" data-logourl="<%= GlobalConstant::Asset.http_common_s3_origin_path %>common-assets/images/social-logos/website_wb_v3.png"><span class="pepo-icon"></span></span>
+          </div>
+          <div class="col-xs-12">
+            <div id="social-error" class="error"><%= I18n.t 'template_tool.social_error' %></div>
+          </div>
+        </div>
+
+        <div id="social-field-wrapper"></div>
+
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="controls-editor-style">
+        <div class="form-horizontal">
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/select',
+                     locals: {
+                             id: 'logo-style',
+                             label: I18n.t('template_tool.controls_social_style_lbl'),
+                             mapping: [
+                                     {selector: 'table.wrapper td:first', category: 'attribute', key: 'class'}
+                             ],
+                             options: '<option data-content="<span class=\'pepo-icon social-logo-color\'></span>" value="logo"></option>
+                                       <option data-content="<span class=\'pepo-icon social-logo-bw\'></span>" value="bw-logo"></option>
+                                       <option data-content="<span class=\'pepo-icon social-logo-wb\'></span>" value="wb-logo"></option>'
+                     }
+          %>
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/select',
+                     locals: {
+                             id: 'logo-size',
+                             label: I18n.t('template_tool.controls_social_size_lbl'),
+                             mapping: [
+                                     {selector: 'table.wrapper td:first a img', category: 'style', key: 'width'}
+                             ],
+                             options: ['40px','38px','36px','34px','32px','30px','28px','26px','24px']
+                     }
+          %>
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/select',
+                     locals: {
+                             id: '',
+                             label: I18n.t('template_tool.controls_alignment_lbl'),
+                             mapping: [
+                                     {selector: 'table.wrapper td:first', category: 'style', key: 'text-align'}
+                             ],
+                             options: ['left','center','right']
+                     }
+          %>
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/padding_px',
+                     locals: {
+                             label: I18n.t('template_tool.controls_padding_lbl'),
+                             padding_type: 'text',
+                             mapping: [
+                                     {id: 'ec-dpt', selector: 'table.wrapper td:first', key: 'padding-top'},
+                                     {id: 'ec-dpr', selector: 'table.wrapper td:first', key: 'padding-right'},
+                                     {id: 'ec-dpb', selector: 'table.wrapper td:first', key: 'padding-bottom'},
+                                     {id: 'ec-dpl', selector: 'table.wrapper td:first', key: 'padding-left'}
+                             ]
+                     }
+          %>
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/color_picker',
+                     locals: {
+                             label: I18n.t('template_tool.controls_bg_color_lbl'),
+                             mapping: [
+                                     {selector: 'table.wrapper td:first', key: 'background-color'}
+                             ]
+                     }
+          %>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <button type="submit" class="btn btn-sky-blue close-btn" id="editor-save"><%= I18n.t 'common.close' %></button>
+</script>
+
+<script type="text/html" id="social-field">
+  <div class="builder-form-group row" data-type="social-input" data-content="{{content}}">
+    <label class="col-xs-4 control-label">
+      <span class="pepo-icon social-logo-sm {{content}}-{{style}}-sm"></span> {{content}} <%= I18n.t 'template_tool.controls_social_url_lbl' %>
+    </label>
+    <div class="col-xs-8 input">
+      <input class="form-control" type="text" data-type="editor-control" data-selector="table.wrapper td:first a[data-content={{content}}]" data-category="attribute" data-key="href">
+    </div>
+  </div>
+</script>
+
+<script type="text/html" id="social-logo">
+  <a href="{{href}}" target="_blank" data-type="social-logo" data-content="{{content}}" class="social-logo {{action}}"><img style="margin:0 5px; width: {{size}}" src="{{logourl}}" /></a>
+</script>

@@ -1,0 +1,20 @@
+<div class="builder-form-group row padding-px">
+  <label for="input-align-" class="col-sm-4 control-label"><%= label %></label>
+  <div class="col-sm-6" style="    text-align: center;font-size: 0;">
+    <div class="row">
+      <input type="text" class="form-control input-sm margin-0-auto" id="<%= mapping[0][:id] %>" data-type="editor-control" data-selector="<%= mapping[0][:selector] %>" data-category="style" data-key="<%= mapping[0][:key] %>"/>
+      <input type="text" class="form-control input-sm bottom-position" id="<%= mapping[1][:id] %>" data-type="editor-control" data-selector="<%= mapping[1][:selector] %>" data-category="style" data-key="<%= mapping[1][:key] %>"/>
+      <% if padding_type=='image' %>
+        <div class="pepo-icon style-pannel-image-padding-icon icon-placement"></div>
+      <% elsif padding_type=='button' %>
+        <div class="pepo-icon style-pannel-button-padding-icon icon-placement"></div>
+      <% elsif padding_type == 'divider' %>
+        <div class="pepo-icon style-pannel-divider-padding-icon icon-placement"></div>
+      <% elsif padding_type == 'text' %>
+        <div class="pepo-icon style-pannel-text-padding-icon icon-placement"></div>
+      <% end %>
+      <input type="text" class="form-control input-sm margin-0-auto" id="<%= mapping[2][:id] %>" data-type="editor-control" data-selector="<%= mapping[2][:selector] %>" data-category="style" data-key="<%= mapping[2][:key] %>"/>
+      <input type="text" class="form-control input-sm top-position" id="<%= mapping[3][:id] %>" data-type="editor-control" data-selector="<%= mapping[3][:selector] %>" data-category="style" data-key="<%= mapping[3][:key] %>"/>
+    </div>
+  </div>
+</div>

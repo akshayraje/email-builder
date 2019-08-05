@@ -1,0 +1,23 @@
+<!-- Widget Code -->
+
+<script type="text/html" id="template-html-code">
+  <div class="content-ui-wrapper" data-type="content" data-name="code"  id="{{id}}">
+  <span class="wrapper">Add your HTML code <b>here</b></span>
+  </div>
+</script>
+
+<script type="text/html" id="editor-code">
+  <h3 class="title"><%= I18n.t 'template_tool.controls_code_lbl' %></h3>
+  <div class="form-horizontal">
+    <%=
+        render partial: 'web/template_builder/content_templates/controls/code_editor',
+               locals: {
+                       mapping: [
+                               {selector: 'span.wrapper:first'},
+                       ]
+               }
+    %>
+  </div>
+  <button type="submit" class="btn btn-sky-blue close-btn" id="editor-save"><%= I18n.t 'common.close' %></button>
+  <button class="btn btn-sky-blue close-btn" data-toggle="modal" data-target="#modal-gallery" data-source="code" id="gallery-show"><%= I18n.t 'gallery.library' %></button>
+</script>

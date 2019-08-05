@@ -1,0 +1,116 @@
+<!-- Widget Image -->
+
+<script type="text/html" id="template-html-image">
+  <div class="content-ui-wrapper" data-type="content" data-name="image"  id="{{id}}">
+  <span class="wrapper" style="display: block; text-align: center; padding-top: 12px; padding-right: 20px; padding-bottom: 12px; padding-left: 20px"><a href=""><img style="width: 100%; max-width: 1120px; border:0; outline: 0" src="<%= GlobalConstant::Asset.common_secure_cdn_path %>common-assets/images/image-placeholder.png" alt=""/></a></span>
+  </div>
+</script>
+
+<script type="text/html" id="editor-image">
+  <h3 class="title"><%= I18n.t 'template_tool.controls_image_lbl' %></h3>
+
+  <div class="tabs">
+
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#controls-editor-content" aria-controls="home" role="tab" data-toggle="tab"><%= I18n.t 'template_tool.content_lbl' %></a></li>
+      <li role="presentation">
+        <a href="#controls-editor-style" aria-controls="profile" role="tab" data-toggle="tab"><%= I18n.t 'template_tool.style_lbl' %></a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active content" id="controls-editor-content">
+        <%=
+          render partial: 'web/template_builder/content_templates/controls/image_src',
+          locals: {
+              label: I18n.t('template_tool.controls_image_src_lbl'),
+              id: 'gallery-img-url',
+              mapping: [
+                  {selector: 'span.wrapper > a > img', category: 'attribute', key: 'src'},
+              ]
+          }
+        %>
+        <%=
+          render partial: 'web/template_builder/content_templates/controls/text',
+            locals: {
+                label: I18n.t('template_tool.controls_alt_text_lbl'),
+                id: 'alt-text',
+                col_size: 11,
+                mapping: [
+                  {selector: 'span.wrapper > a > img', category: 'attribute', key: 'alt'},
+                ]
+            }
+        %>
+        <%=
+          render partial: 'web/template_builder/content_templates/controls/text',
+             locals: {
+                 label: I18n.t('template_tool.controls_link_url_lbl'),
+                 id: 'link-url',
+                 col_size: 11,
+                 mapping: [
+                     {selector: 'span.wrapper > a', category: 'attribute', key: 'href'},
+                 ]
+             }
+        %>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="controls-editor-style">
+        <%=
+          render partial: 'web/template_builder/content_templates/controls/padding_px',
+          locals: {
+              label: I18n.t('template_tool.controls_padding_lbl'),
+              padding_type: 'image',
+              mapping: [
+                  {selector: 'span.wrapper', key: 'padding-top'},
+                  {selector: 'span.wrapper', key: 'padding-right'},
+                  {selector: 'span.wrapper', key: 'padding-bottom'},
+                  {selector: 'span.wrapper', key: 'padding-left'}
+              ]
+          }
+        %>
+        <%=
+          render partial: 'web/template_builder/content_templates/controls/width_pc',
+          locals: {
+              label: I18n.t('template_tool.controls_image_size_lbl'),
+              mapping: [
+                {selector: 'span.wrapper > a > img', key: 'width'},
+                {selector: 'span.wrapper > a > img', key: 'max-width'}
+              ]
+          }
+        %>
+        <%=
+            render partial: 'web/template_builder/content_templates/controls/select',
+                   locals: {
+                           id: '',
+                           label: I18n.t('template_tool.controls_alignment_lbl'),
+                           mapping: [
+                                   {selector: 'span.wrapper', category: 'style', key: 'text-align'}
+                           ],
+                           options: ['left','center','right']
+                   }
+        %>
+        <%=
+            render partial: 'web/template_builder/content_templates/controls/select',
+                   locals: {
+                           id: '',
+                           label: I18n.t('template_tool.controls_block_lbl'),
+                           mapping: [
+                                   {selector: 'span.wrapper > a > img', category: 'style', key: 'display'}
+                           ],
+                           options: ['block','inline']
+                   }
+        %>
+        <%=
+            render partial: 'web/template_builder/content_templates/controls/color_picker',
+                   locals: {
+                           label: I18n.t('template_tool.controls_bg_color_lbl'),
+                           mapping: [
+                                   {selector: 'span.wrapper', key: 'background-color'}
+                           ]
+                   }
+        %>
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-sky-blue close-btn" id="editor-save"><%= I18n.t 'common.close' %></button>
+
+</script>

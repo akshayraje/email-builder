@@ -1,0 +1,55 @@
+$template-builder-sprite-retina-location: "//d5qlujvqiya5c.cloudfront.net/common-assets/sprite/templatetool_builder_content_page_sprite_retina_v3.png";
+$template-builder-sprite-location: "//d5qlujvqiya5c.cloudfront.net/common-assets/sprite/templatetool_builder_content_page_sprite_v3.png";
+
+@mixin icon-generator($width,$height,$posX,$posY,$offsetHover,$offsetActive,$scale:100){
+  background-image: url($template-builder-sprite-location);
+  background-size: 600px * $scale/100 570px * $scale/100;
+  background-repeat: no-repeat;
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    background-image: url($template-builder-sprite-retina-location);
+    background-size: 600px * $scale/100 570px * $scale/100;
+  }
+  display: inline-block;
+  outline: none;
+  &:focus{
+    outline: none;
+    background-position: $posX * $scale/100 $posY * $scale/100;
+  }
+  width: $width * $scale/100;
+  height: $height * $scale/100;
+  background-position: $posX * $scale/100 $posY * $scale/100;
+  &:hover{
+    background-position: $offsetHover * $scale/100 $posY * $scale/100;
+  }
+  &:active{
+    background-position: $offsetActive * $scale/100 $posY * $scale/100;
+  }
+}
+
+.pepo-template-builder-icon.builder-text-icon{
+  @include icon-generator(136px,116px,-25px, -9px,-25px,-25px,65);
+}
+.pepo-template-builder-icon.builder-image-icon{
+  @include icon-generator(136px,116px,-166px,-9px,-166px,-166px,65);
+}
+.pepo-template-builder-icon.builder-button-icon{
+  @include icon-generator(136px,116px,-322px,-9px,-322px,-322px,65);
+}
+.pepo-template-builder-icon.builder-divider-icon{
+  @include icon-generator(136px,116px,-22px,-120px,-22px,-22px,65);
+}
+.pepo-template-builder-icon.builder-social-icon{
+  @include icon-generator(136px,116px,-172px,-126px,-172px,-172px,65);
+}
+.pepo-template-builder-icon.builder-code-icon{
+  @include icon-generator(136px,116px,-322px,-130px,-322px,-322px,65);
+}
+.pepo-template-builder-icon.ipad-widget-view{
+  @include icon-generator(98px,304px,-488px,-18px,-488px,-488px);
+}

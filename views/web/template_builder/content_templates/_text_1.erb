@@ -1,0 +1,98 @@
+<!-- Widget Text -->
+
+<script type="text/html" id="template-html-text">
+  <div class="content-ui-wrapper" data-type="content" data-name="text"  id="{{id}}">
+  <table class="wrapper" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td style="text-align: left;padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;">
+    Add new text to your template here
+  </td></tr></table>
+  </div>
+</script>
+
+<script type="text/html" id="editor-text">
+  <h3 class="title"><%= I18n.t 'template_tool.controls_text_lbl' %></h3>
+
+  <div class="tabs">
+
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#controls-editor-content" aria-controls="home" role="tab" data-toggle="tab"><%= I18n.t 'template_tool.content_lbl' %></a></li>
+      <li role="presentation">
+        <a href="#controls-editor-style" aria-controls="profile" role="tab" data-toggle="tab"><%= I18n.t 'template_tool.style_lbl' %></a></li>
+    </ul>
+
+    <div class="tab-content">
+
+      <div role="tabpanel" class="tab-pane active content" id="controls-editor-content">
+        <%= render partial: 'web/template_builder/content_templates/controls/text_editor',
+                   locals: {
+                           mapping: [
+                                   {selector: 'table.wrapper td:first', toolbar: 'bold italic underline link backcolor forecolor | alignleft aligncenter alignright | bullist numlist | code_toggle'},
+                           ]
+                   }
+        %>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="controls-editor-style">
+        <div class="form-horizontal">
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/padding_px',
+                     locals: {
+                             label: I18n.t('template_tool.controls_padding_lbl'),
+                             padding_type: 'text',
+                             mapping: [
+                                     {id: 'ec-dpt', selector: 'table.wrapper td:first', key: 'padding-top'},
+                                     {id: 'ec-dpr', selector: 'table.wrapper td:first', key: 'padding-right'},
+                                     {id: 'ec-dpb', selector: 'table.wrapper td:first', key: 'padding-bottom'},
+                                     {id: 'ec-dpl', selector: 'table.wrapper td:first', key: 'padding-left'}
+                             ]
+                     }
+          %>
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/select',
+                     locals: {
+                             id: '',
+                             label: I18n.t('template_tool.controls_border_style_lbl'),
+                             mapping: [
+                                     {selector: 'table.wrapper td:first', category: 'style', key: 'border-style'}
+                             ],
+                             options: ['solid','dashed','dotted','double','groove','outset','inset','none']
+                     }
+          %>
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/select',
+                     locals: {
+                             id: '',
+                             label: I18n.t('template_tool.controls_border_thinkness_lbl'),
+                             mapping: [
+                                     {selector: 'table.wrapper td:first', category: 'style', key: 'border-width'}
+                             ],
+                             options: ['0px', '1px','2px','3px','4px','5px','6px','7px','8px']
+                     }
+          %>
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/color_picker',
+                     locals: {
+                             label: I18n.t('template_tool.controls_border_color_lbl'),
+                             mapping: [
+                                     {selector: 'table.wrapper td:first', key: 'border-color'}
+                             ]
+                     }
+          %>
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/color_picker',
+                     locals: {
+                             label: I18n.t('template_tool.controls_bg_color_lbl'),
+                             mapping: [
+                                     {selector: 'table.wrapper td:first', key: 'background-color'}
+                             ]
+                     }
+          %>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <button type="submit" class="btn btn-sky-blue close-btn" id="editor-save"><%= I18n.t 'common.close' %></button>
+</script>

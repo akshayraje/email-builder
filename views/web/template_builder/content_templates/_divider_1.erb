@@ -1,0 +1,69 @@
+<!-- Widget Divider -->
+
+<script type="text/html" id="template-html-divider">
+  <div class="content-ui-wrapper" data-type="content" data-name="divider"  id="{{id}}">
+  <table class="wrapper" border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td style="padding-top: 20px; padding-bottom: 20px; padding-right: 0; padding-left: 0"><span style="border:none; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000; display: block"></span></td></tr></table>
+  </div>
+</script>
+
+<script type="text/html" id="editor-divider">
+  <h3 class="title"><%= I18n.t 'template_tool.controls_divider_lbl' %></h3>
+  <div class="tab-content layout-content">
+    <div class="form-horizontal">
+      <%=
+          render partial: 'web/template_builder/content_templates/controls/padding_px',
+                 locals: {
+                         label: I18n.t('template_tool.controls_padding_lbl'),
+                         padding_type: 'divider',
+                         mapping: [
+                                 {selector: 'table.wrapper td', key: 'padding-top'},
+                                 {selector: 'table.wrapper td', key: 'padding-right'},
+                                 {selector: 'table.wrapper td', key: 'padding-bottom'},
+                                 {selector: 'table.wrapper td', key: 'padding-left'}
+                         ]
+                 }
+      %>
+      <%=
+          render partial: 'web/template_builder/content_templates/controls/select',
+                 locals: {
+                         id: '',
+                         label: I18n.t('template_tool.controls_divider_style_lbl'),
+                         mapping: [
+                                 {selector: 'table.wrapper td span', category: 'style', key: 'border-bottom-style'}
+                         ],
+                         options: ['solid','dashed','dotted','double','groove','outset','inset']
+                 }
+      %>
+      <%=
+          render partial: 'web/template_builder/content_templates/controls/select',
+                 locals: {
+                         id: '',
+                         label: I18n.t('template_tool.controls_divider_thickness_lbl'),
+                         mapping: [
+                                 {selector: 'table.wrapper td span', category: 'style', key: 'border-bottom-width'}
+                         ],
+                         options: ['1px','2px','3px','4px','5px','6px','7px','8px']
+                 }
+      %>
+      <%=
+          render partial: 'web/template_builder/content_templates/controls/color_picker',
+                 locals: {
+                         label: I18n.t('template_tool.controls_divider_color_lbl'),
+                         mapping: [
+                                 {selector: 'table.wrapper td span', key: 'border-bottom-color'}
+                         ]
+                 }
+      %>
+      <%=
+          render partial: 'web/template_builder/content_templates/controls/color_picker',
+                 locals: {
+                         label: I18n.t('template_tool.controls_bg_color_lbl'),
+                         mapping: [
+                                 {selector: 'table.wrapper td', key: 'background-color'}
+                         ]
+                 }
+      %>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-sky-blue close-btn" id="editor-save"><%= I18n.t 'common.close' %></button>
+</script>

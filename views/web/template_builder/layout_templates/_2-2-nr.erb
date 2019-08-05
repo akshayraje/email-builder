@@ -1,0 +1,50 @@
+<!-- Layout 2-2-nr -->
+
+<script type="text/html" id="template-html-2-2-nr">
+  <div class="layout-ui-wrapper" data-type="layout" data-name="2-2-nr"  id="{{id}}">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>
+
+          <table border="0" cellspacing="0" cellpadding="0" width="100%" data-type="structure" style="margin:0 auto;max-width: 640px;background-color: #fff;text-align: center;vertical-align: top">
+            <tr>
+              <td style="height: 50px;text-align: center; width:50%" data-type="content-container">
+              </td>
+              <td style="height: 50px;text-align: center; width:50" data-type="content-container">
+              </td>
+            </tr>
+          </table>
+
+        </td>
+      </tr>
+    </table>
+  </div>
+</script>
+
+<script type="text/html" id="editor-2-2-nr">
+  <h3 class="title"><%= I18n.t 'template_tool.2_by_2_adjustable_lbl' %></h3>
+
+  <div class="tab-content layout-content">
+    <div class="form-horizontal">
+      <%=
+          render partial: 'web/template_builder/content_templates/controls/color_picker',
+                 locals: {
+                         label: I18n.t('template_tool.controls_bg_color_lbl'),
+                         mapping: [
+                                 {selector: 'tr:first', key: 'background-color'}
+                         ]
+                 }
+      %>
+      <%=
+          render partial: 'web/template_builder/content_templates/controls/color_picker',
+                 locals: {
+                         label: I18n.t('template_tool.controls_content_bg_color_lbl'),
+                         mapping: [
+                                 {selector: '[data-type="structure"]', key: 'background-color'}
+                         ]
+                 }
+      %>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-sky-blue close-btn" id="editor-save">Close</button>
+</script>

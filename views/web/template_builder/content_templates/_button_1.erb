@@ -1,0 +1,150 @@
+<!-- Widget Button -->
+
+<script type="text/html" id="template-html-button">
+  <div class="content-ui-wrapper" data-type="content" data-name="button"  id="{{id}}">
+  <span class="wrapper" style="display: block; text-align: center; padding-top: 12px; padding-right: 20px; padding-bottom: 12px; padding-left: 20px;">
+    <a style="background-color: #ffffff; display: inline-block;border-radius: 20px;text-align: center;text-decoration: none;font-weight: 300;margin: 0px auto; border-width: 1px; border-color: #000000; border-style: solid; height: 40px; line-height: 40px; width: 150px;" href="#" target="_blank">
+      <span style="font-size: 14px; color: #000000;">Click me</span>
+    </a>
+  </span>
+  </div>
+</script>
+
+<script type="text/html" id="editor-button">
+  <h3 class="title"><%= I18n.t 'template_tool.controls_button_lbl' %></h3>
+
+  <div class="tabs">
+
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#controls-editor-content" aria-controls="home" role="tab" data-toggle="tab"><%= I18n.t 'template_tool.content_lbl' %></a></li>
+      <li role="presentation"><a href="#controls-editor-style" aria-controls="profile" role="tab" data-toggle="tab"><%= I18n.t 'template_tool.style_lbl' %></a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active content" id="controls-editor-content">
+        <%=
+            render partial: 'web/template_builder/content_templates/controls/text_editor',
+                   locals: {
+                           mapping: [
+                                   {selector: 'span.wrapper > a', toolbar: 'bold italic underline forecolor | alignleft aligncenter alignright | code_toggle'},
+                           ]
+                   }
+        %>
+        <%=
+            render partial: 'web/template_builder/content_templates/controls/text',
+                   locals: {
+                           label: I18n.t('template_tool.controls_link_url_lbl'),
+                           id: 'link-url',
+                           col_size: 11,
+                           mapping: [
+                                   {selector: 'span.wrapper > a', category: 'attribute', key: 'href'},
+                           ]
+                   }
+        %>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="controls-editor-style">
+        <div class="form-horizontal">
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/padding_px',
+                     locals: {
+                             label: I18n.t('template_tool.controls_padding_lbl'),
+                             padding_type: 'button',
+                             mapping: [
+                                     {selector: 'span.wrapper', key: 'padding-top'},
+                                     {selector: 'span.wrapper', key: 'padding-right'},
+                                     {selector: 'span.wrapper', key: 'padding-bottom'},
+                                     {selector: 'span.wrapper', key: 'padding-left'}
+                             ]
+                     }
+          %>
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/color_picker',
+                     locals: {
+                             label: I18n.t('template_tool.controls_button_color_lbl'),
+                             mapping: [
+                                     {selector: 'span.wrapper > a', key: 'background-color'}
+                             ]
+                     }
+          %>
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/color_picker',
+                     locals: {
+                             label: I18n.t('template_tool.controls_bg_color_lbl'),
+                             mapping: [
+                                     {selector: 'span.wrapper', key: 'background-color'}
+                             ]
+                     }
+          %>
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/select',
+                     locals: {
+                             id: '',
+                             label: I18n.t('template_tool.controls_corner_radius_lbl'),
+                             mapping: [
+                                     {selector: 'span.wrapper > a', category: 'style', key: 'border-radius'}
+                             ],
+                             options: ['0px', '1px','2px','3px','4px','5px','6px','7px','8px','9px','10px',
+                                       '11px','12px','13px','14px','15px','16px','17px','18px','19px','20px']
+                     }
+          %>
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/select',
+                     locals: {
+                             id: '',
+                             label: I18n.t('template_tool.controls_border_style_lbl'),
+                             mapping: [
+                                     {selector: 'span.wrapper > a', category: 'style', key: 'border-style'}
+                             ],
+                             options: ['solid','dashed','dotted','double','groove','outset','inset','none']
+                     }
+          %>
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/select',
+                     locals: {
+                             id: '',
+                             label: I18n.t('template_tool.controls_border_thinkness_lbl'),
+                             mapping: [
+                                     {selector: 'span.wrapper > a', category: 'style', key: 'border-width'}
+                             ],
+                             options: ['0px', '1px','2px','3px','4px','5px','6px','7px','8px']
+                     }
+          %>
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/color_picker',
+                     locals: {
+                             label: I18n.t('template_tool.controls_border_color_lbl'),
+                             mapping: [
+                                     {selector: 'span.wrapper > a', key: 'border-color'}
+                             ]
+                     }
+          %>
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/select',
+                     locals: {
+                             id: '',
+                             label: I18n.t('template_tool.controls_alignment_lbl'),
+                             mapping: [
+                                     {selector: 'span.wrapper', category: 'style', key: 'text-align'}
+                             ],
+                             options: ['left','center','right']
+                     }
+          %>
+          <%=
+              render partial: 'web/template_builder/content_templates/controls/width_height',
+                     locals: {
+                             label: I18n.t('template_tool.controls_width_height_lbl'),
+                             mapping: [
+                                     {selector: 'span.wrapper > a', key: 'width'},
+                                     {selector: 'span.wrapper > a', key: 'height'},
+                                     {selector: 'span.wrapper > a', key: 'line-height'},
+                             ]
+                     }
+          %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <button type="submit" class="btn btn-sky-blue close-btn" id="editor-save"><%= I18n.t 'common.close' %></button>
+</script>

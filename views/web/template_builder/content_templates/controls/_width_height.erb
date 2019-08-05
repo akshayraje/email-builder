@@ -1,0 +1,20 @@
+<div class="builder-form-group row width-height-picker">
+  <label for="input-align-" class="col-sm-4 control-label"><%= label %></label>
+  <div class="col-sm-8">
+    <div class="row ver-center">
+      <span class="input-group">
+        <input type="text" class="form-control input-sm" data-type="editor-control" data-selector="<%=mapping[0][:selector]%>" data-category="style" data-key="<%=mapping[0][:key]%>">
+        <span class="input-group-addon">width</span>
+      </span>
+      <span style="margin: 0 8px">
+        <span class="pepo-icon lock-icon"></span>
+      </span>
+      <span class="input-group">
+        <input type="text" class="form-control input-sm" id="width-height-picker-height" data-type="editor-control" data-selector="<%=mapping[1][:selector]%>" data-category="style" data-key="<%=mapping[1][:key]%>">
+        <span class="input-group-addon">height</span>
+      </span>
+      <input type="hidden" data-type="editor-control" data-listen-to="width-height-picker-height" data-selector="<%=mapping[2][:selector]%>" data-category="style" data-key="<%=mapping[2][:key]%>">
+      <a href="javascript:void(0)" class="resetTxt floatLeft">Reset</a>
+    </div>
+  </div>
+</div>

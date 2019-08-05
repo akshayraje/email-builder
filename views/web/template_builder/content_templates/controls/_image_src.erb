@@ -1,0 +1,11 @@
+<div class="builder-form-group row text">
+  <div class="col-xs-6 image-input"><img id="image-control-preview" src="" width="170"  height="110"/></div>
+  <div class="col-xs-6 image-input">
+    <div class="row">
+      <div id="image-control-name">placeholder-image.png</div>
+      <div id="image-control-size"></div>
+      <button class="btn btn-sky-blue less-border no-float" data-toggle="modal" data-target="#modal-gallery" data-source="image" id="gallery-show"><%= I18n.t 'gallery.library' %></button>
+      <input class="form-control input-sm" id="<%= id %>" type="hidden" data-type="editor-control" data-selector="<%=mapping[0][:selector]%>" data-category="<%=mapping[0][:category]%>" data-key="<%=mapping[0][:key]%>">
+    </div>
+  </div>
+</div>

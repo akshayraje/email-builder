@@ -1,0 +1,479 @@
+/*
+Inherited cssreset/cssreset.css from YUI 3.18.1 (build f7e7bcb)
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+Applied to .preview-container
+*/
+  .preview-container{
+
+  div,
+  dl,
+  dt,
+  dd,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  pre,
+  code,
+  form,
+  fieldset,
+  legend,
+  input,
+  textarea,
+  p,
+  blockquote,
+  th,
+  td {
+    margin:0;
+    padding:0;
+  }
+  table {
+    border-collapse:collapse;
+    border-spacing:0;
+    background-color: transparent;
+  }
+  fieldset,
+  img {
+    border:0;
+  }
+  address,
+  caption,
+  cite,
+  code,
+  dfn,
+  th,
+  var {
+    font-style:normal;
+    font-weight:normal;
+  }
+
+  strong,
+  b{
+    font-weight:bold;
+  }
+
+  caption,
+  th {
+    text-align:left;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+
+  }
+  q:before,
+  q:after {
+    content:'';
+  }
+  abbr,
+  acronym {
+    border:0;
+    font-variant:normal;
+  }
+  /* to preserve line-height and selector appearance */
+  sup {
+    vertical-align:text-top;
+  }
+  sub {
+    vertical-align:text-bottom;
+  }
+  input,
+  textarea,
+  select {
+    font-family:inherit;
+    font-size:inherit;
+    font-weight:inherit;
+    *font-size:100%; /*to enable resizing for IE*/
+  }
+  /*because legend doesn't inherit in IE */
+  legend {
+    color:#000;
+  }
+
+  /*
+  Inherited cssnormalize/cssnormalize.css from YUI 3.18.1 (build f7e7bcb)
+  Licensed under the BSD License.
+  http://yuilibrary.com/license/
+  */
+
+  /* ==========================================================================
+   Links
+   ========================================================================== */
+
+  /**
+   * Address `outline` inconsistency between Chrome and other browsers.
+   */
+
+  a:focus {
+    outline: thin dotted;
+  }
+
+  /**
+   * Improve readability when focused and also mouse hovered in all browsers.
+   */
+
+  a:active,
+  a:hover {
+    outline: 0;
+    text-decoration: none;
+  }
+
+  /* ==========================================================================
+     Typography
+     ========================================================================== */
+
+  /**
+   * Address font sizes and margins set differently in IE 6/7.
+   * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+   * and Chrome.
+   */
+
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+  }
+
+  h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+  }
+
+  h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+  }
+
+  h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+  }
+
+  h6 {
+    font-size: 0.67em;
+    margin: 2.33em 0;
+  }
+
+  /**
+   * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+   */
+
+  abbr[title] {
+    border-bottom: 1px dotted;
+  }
+
+  /**
+   * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+   */
+
+  b,
+  strong {
+    font-weight: bold;
+  }
+
+  blockquote {
+    margin: 1em 40px;
+  }
+
+  /**
+   * Address styling not present in Safari 5 and Chrome.
+   */
+
+  dfn {
+    font-style: italic;
+  }
+
+  /**
+   * Address differences between Firefox and other browsers.
+   * Known issue: no IE 6/7 normalization.
+   */
+
+  hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+  }
+
+  /**
+   * Address styling not present in IE 6/7/8/9.
+   */
+
+  mark {
+    background: #ff0;
+    color: #000;
+  }
+
+  /**
+   * Address margins set differently in IE 6/7.
+   */
+
+  p,
+  pre {
+    margin: 1em 0;
+  }
+
+  /**
+   * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+   */
+
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+  }
+
+  /**
+   * Improve readability of pre-formatted text in all browsers.
+   */
+
+  pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /**
+   * Address CSS quotes not supported in IE 6/7.
+   */
+
+  q {
+    quotes: none;
+  }
+
+  /**
+   * Address `quotes` property not supported in Safari 4.
+   */
+
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+
+  /**
+   * Address inconsistent and variable font size in all browsers.
+   */
+
+  small {
+    font-size: 80%;
+  }
+
+  /**
+   * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+   */
+
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  sup {
+    top: -0.5em;
+  }
+
+  sub {
+    bottom: -0.25em;
+  }
+
+  /* ==========================================================================
+     Lists
+     ========================================================================== */
+
+  /**
+   * Address margins set differently in IE 6/7.
+   */
+
+  dl,
+  menu,
+  ol,
+  ul {
+    margin: 1em 0;
+  }
+
+  dd {
+    margin: 0 0 0 40px;
+  }
+
+  /**
+   * Address paddings set differently in IE 6/7.
+   */
+
+  menu,
+  ol,
+  ul {
+    padding: 0 0 0 40px;
+  }
+
+  /* ==========================================================================
+     Embedded content
+     ========================================================================== */
+
+  /**
+   * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+   * 2. Improve image quality when scaled in IE 7.
+   */
+
+  img {
+    border: 0;
+    /* 1 */
+    -ms-interpolation-mode: bicubic;
+    /* 2 */
+  }
+
+  /* ==========================================================================
+     Tables
+     ========================================================================== */
+
+  /**
+   * Remove most spacing between table cells.
+   */
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+}
+
+
+/*
+ * End of reset and normalize code
+ */
+
+/* For the scroll bug */
+body{
+  overflow: hidden;
+}
+.overflow-hidden-ebuilder{
+  overflow: hidden;
+}
+.overflow-y-scroll-noebuilder{
+  overflow-y: hidden !important;
+}
+/*
+CSS to manage SDDR hovers
+*/
+.drop-hover{
+  background-color: #e7f6f7;
+  outline: dotted 1px #75a9b0;
+  p{
+    color: #75a9b0;
+    font-size: 12px;
+  }
+}
+.layout-ui-wrapper:hover{
+  outline: dotted 1px #84d1d4;
+  z-index: 999;
+  .layout-handle{
+    border: dotted 1px #84d1d4;
+    border-left: none;
+  }
+}
+.layout-ui-wrapper.active,
+.content-ui-wrapper.active{
+  outline: dotted 2px #179eb1;
+  z-index: 1000;
+  .layout-handle{
+    border: dotted 2px #179eb1;
+    border-left: none;
+  }
+}
+.layout-ui-wrapper:hover,
+.layout-ui-wrapper.active{
+  position: relative;
+  cursor: move;
+}
+
+.layout-ui-wrapper.active [data-type="content-container"]{
+  outline: dotted 1px #d7d8da;
+}
+
+.layout-ui-wrapper.active .ui-resizable-handle{
+  cursor: ew-resize;
+}
+
+.layout-handle{
+  background-color: #FFFFFF;
+  border-left: none;
+  height: 40px;
+  width: 20px;
+  right:-20px;
+  position: absolute;
+  span{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+.layout-actions,
+.content-actions{
+  background-color: #84D1D4;
+  border-radius: 20px;
+  border-left: none;
+  height: 40px;
+  width: 110px;
+  right: 20px;
+  top: -20px;
+  position: absolute;
+  padding: 3px 0 !important;
+  cursor: default;
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.25);
+  box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.25);
+  .inner{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    span{
+      cursor: pointer;
+    }
+  }
+}
+
+[data-type="content-template"]:hover,
+[data-type="layout-template"] > img:hover{
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.15);
+}
+
+[data-type="body"] .sortable-highlight{
+  background-color: #f2fafb;
+  outline: dotted 1px #75a9b0;
+  background-image: url("data:image/png;base64,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");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 92px 12px;
+}
+
+[data-type="content-container"].empty{
+  background-color: #f2fafb;
+  outline: dotted 1px #75a9b0;
+  background-image: url("data:image/png;base64,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");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 92px 12px;
+}

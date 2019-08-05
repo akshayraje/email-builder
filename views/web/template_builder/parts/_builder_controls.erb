@@ -1,0 +1,228 @@
+<div class="tab-container">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs pepo-page-tabs">
+    <li class="active"><a href=".controls-content" aria-controls="home" data-toggle="tab" class="tab-name"><%= I18n.t 'template_tool.content_lbl' %></a></li>
+    <li><a href=".controls-layout" aria-controls="profile" data-toggle="tab" class="tab-name"><%= I18n.t 'template_tool.layout_lbl' %></a></li>
+    <li><a href=".controls-page-settings" aria-controls="messages" data-toggle="tab" class="tab-name"><%= I18n.t 'template_tool.page_settings_lbl' %></a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="builder-controls tab-content">
+    <div role="tabpanel" class="tab-pane active controls-content">
+
+      <p class="text-info"><span class="glyphicon glyphicon-info-sign"></span> <%= I18n.t 'template_tool.drag_drop_lbl' %></p>
+      <div class="col-content">
+        <div class="thumbnail" data-type="content-template" data-name="text">
+          <span class="pepo-template-builder-icon builder-text-icon"></span>
+          <div class="caption">
+            <p><%= I18n.t 'template_tool.controls_text_lbl' %></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-content">
+        <div class="thumbnail" data-type="content-template" data-name="image">
+          <span class="pepo-template-builder-icon builder-image-icon"></span>
+          <div class="caption">
+            <p><%= I18n.t 'template_tool.controls_image_lbl' %></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-content">
+        <div class="thumbnail" data-type="content-template" data-name="button">
+          <span class="pepo-template-builder-icon builder-button-icon"></span>
+          <div class="caption">
+            <p><%= I18n.t 'template_tool.controls_button_lbl' %></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-content">
+        <div class="thumbnail" data-type="content-template" data-name="divider">
+          <span class="pepo-template-builder-icon builder-divider-icon"></span>
+          <div class="caption">
+            <p><%= I18n.t 'template_tool.controls_divider_lbl' %></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-content">
+        <div class="thumbnail" data-type="content-template" data-name="social">
+          <span class="pepo-template-builder-icon builder-social-icon"></span>
+          <div class="caption">
+            <p><%= I18n.t 'template_tool.controls_social_lbl' %></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-content">
+        <div class="thumbnail" data-type="content-template" data-name="code">
+          <span class="pepo-template-builder-icon builder-code-icon"></span>
+          <div class="caption">
+            <p><%= I18n.t 'template_tool.controls_code_lbl' %></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div role="tabpanel" class="tab-pane controls-layout">
+
+      <h3 style="display: inline-block;margin-top: 10px;"><%= I18n.t 'template_tool.responsive_templates_lbl' %></h3>
+      <span id="responsiveContainerPopOver">
+        <span class="hidden-xs hidden-sm">
+          <span class="cursorPointer" title="<img src='//<%=GlobalConstant::Asset.common_cdn%>/common-assets/images/responsive_containers_info.gif'/><%= I18n.t 'template_tool.responsiveContainerTitle' %>" data-trigger="hover" data-toggle="popover"  data-placement="right" data-content="<%= I18n.t 'template_tool.responsiveContainerDesc' %>"><span class="glyphicon glyphicon-info-sign infoIcon"></span></span>
+        </span>
+        <span style="display: inline-block">
+          <span class="visible-xs visible-sm">
+            <a class="cursorPointer" role="button" title="<img src='//<%=GlobalConstant::Asset.common_cdn%>/common-assets/images/responsive_containers_info.gif'/><%= I18n.t 'template_tool.responsiveContainerTitle' %>" data-trigger="focus" data-toggle="popover" data-placement="right" data-content="<%= I18n.t 'template_tool.responsiveContainerDesc' %>"><span class="glyphicon glyphicon-info-sign infoIcon"></span></a>
+          </span>
+        </span>
+      </span>
+
+      <div class="row-layout">
+        <label><%= I18n.t 'template_tool.1_by_1_responsive_lbl' %></label>
+        <div class="thumbnail" data-type="layout-template" data-name="single">
+          <img src="//<%=GlobalConstant::Asset.common_cdn%>/common-assets/sprite/templatetool_builder_content_page_single_2x.png" alt="...">
+        </div>
+      </div>
+
+      <div class="row-layout">
+        <label><%= I18n.t 'template_tool.2_by_2_responsive_center_lbl' %></label>
+        <div class="thumbnail" data-type="layout-template" data-name="2-2-center">
+          <img src="//<%=GlobalConstant::Asset.common_cdn%>/common-assets/sprite/templatetool_builder_content_page_2:2_center_2x.png" alt="...">
+        </div>
+      </div>
+
+      <div class="row-layout">
+        <label><%= I18n.t 'template_tool.3_by_3_responsive_lbl' %></label>
+        <div class="thumbnail" data-type="layout-template" data-name="3-3">
+          <img src="//<%=GlobalConstant::Asset.common_cdn%>/common-assets/sprite/templatetool_builder_content_page_3:3_2x.png" alt="...">
+        </div>
+      </div>
+
+      <h3 style="display: inline-block"><%= I18n.t 'template_tool.adjustable_templates_lbl' %>&nbsp;&nbsp;<span class="small"><%= I18n.t 'template_tool.non_responsive_lbl' %></span></h3>
+      <span id="responsiveContainerPopOver" class="responsiveContainerPopOver2">
+        <span class="hidden-xs hidden-sm">
+          <span class="cursorPointer" title="<img src='//<%=GlobalConstant::Asset.common_cdn%>/common-assets/images/non_responsive_containers_info.gif'/><%= I18n.t 'template_tool.nonResponsiveContainerTitle' %>" data-trigger="hover" data-toggle="popover2"  data-placement="right" data-content="<%= I18n.t 'template_tool.nonResponsiveContainerDesc' %>"><span class="glyphicon glyphicon-info-sign infoIcon"></span></span>
+        </span>
+        <span style="display: inline-block">
+          <span class="visible-xs visible-sm">
+            <a class="cursorPointer" role="button" title="<img src='//<%=GlobalConstant::Asset.common_cdn%>/common-assets/images/non_responsive_containers_info.gif'/><%= I18n.t 'template_tool.nonResponsiveContainerTitle' %>" data-trigger="focus" data-toggle="popover2" data-placement="right" data-content="<%= I18n.t 'template_tool.nonResponsiveContainerDesc' %>"><span class="glyphicon glyphicon-info-sign infoIcon"></span></a>
+          </span>
+        </span>
+      </span>
+
+      <div class="row-layout">
+        <label><%= I18n.t 'template_tool.2_by_2_adjustable_lbl' %></label>
+        <div class="thumbnail" data-type="layout-template" data-name="2-2-nr">
+          <img src="//<%=GlobalConstant::Asset.common_cdn%>/common-assets/sprite/templatetool_builder_content_page_2:2_center_nr_2x.png" alt="...">
+        </div>
+      </div>
+
+      <div class="row-layout">
+        <label><%= I18n.t 'template_tool.3_by_3_adjustable_lbl' %></label>
+        <div class="thumbnail" data-type="layout-template" data-name="3-3-nr">
+          <img src="//<%=GlobalConstant::Asset.common_cdn%>/common-assets/sprite/templatetool_builder_content_page_3:3_nr_2x.png" alt="...">
+        </div>
+      </div>
+
+    </div>
+
+    <div role="tabpanel" class="tab-pane controls-page-settings">
+      <p class="text-info"><span class="glyphicon glyphicon-info-sign"></span> <%= I18n.t 'template_tool.template_settings_lbl' %></p>
+      <div class="page-settings-editor" data-type="editor" data-name="body">
+        <%=
+            render partial: 'web/template_builder/content_templates/controls/padding_px',
+                   locals: {
+                           label: I18n.t('template_tool.controls_padding_lbl'),
+                           padding_type: 'text',
+                           mapping: [
+                                   {selector: 'td:first', key: 'padding-top'},
+                                   {selector: 'td:first', key: 'padding-right'},
+                                   {selector: 'td:first', key: 'padding-bottom'},
+                                   {selector: 'td:first', key: 'padding-left'}
+                           ]
+                   }
+        %>
+        <%=
+            render partial: 'web/template_builder/content_templates/controls/text',
+                   locals: {
+                           label: I18n.t('template_tool.settings_content_width_lbl'),
+                           id: 'content-width',
+                           col_size: 6,
+                           mapping: [
+                                   {selector: '[data-type="structure"]', category: 'style', key: 'max-width'},
+                           ]
+                   }
+        %>
+      <%=
+            render partial: 'web/template_builder/content_templates/controls/select',
+                   locals: {
+                           id: '',
+                           label: I18n.t('template_tool.settings_fonts_lbl'),
+                           mapping: [
+                                   {selector: '', category: 'style', key: 'font-family'}
+                           ],
+                           options: [
+                                   'Arial, Helvetica, sans-serif',
+                                   '\'Arial Black\', Gadget, sans-serif',
+                                   '\'Comic Sans MS\', \'Comic Sans MS5\', cursive',
+                                   '\'Courier New\', Courier6, monospace',
+                                   'Georgia1, Georgia, serif',
+                                   'Impact, Impact5, Charcoal6, sans-serif',
+                                   '\'Lucida Console\', Monaco5, monospace',
+                                   '\'Lucida Sans Unicode\', \'Lucida Grande\', sans-serif',
+                                   '\'Palatino Linotype\', \'Book Antiqua3\', Palatino6, serif',
+                                   'Tahoma, Geneva, sans-serif',
+                                   '\'Times New Roman\', Times, serif',
+                                   '\'Trebuchet MS1\', Helvetica, sans-serif',
+                                   'Verdana, Geneva, sans-serif'
+                           ]
+                   }
+      %>
+      <%=
+          render partial: 'web/template_builder/content_templates/controls/color_picker',
+                 locals: {
+                         label: I18n.t('template_tool.controls_bg_color_lbl'),
+                         mapping: [
+                                 {selector: '', key: 'background-color'}
+                         ]
+                 }
+      %>
+        <%=
+            render partial: 'web/template_builder/content_templates/controls/color_picker',
+                   locals: {
+                           label: I18n.t('template_tool.controls_content_bg_color_lbl'),
+                           mapping: [
+                                   {selector: '[data-type="structure"]', key: 'background-color'}
+                           ]
+                   }
+        %>
+        <%=
+            render partial: 'web/template_builder/content_templates/controls/checkbox',
+                   locals: {
+                           label: I18n.t('template_tool.settings_browser_view_lbl'),
+                           desc: I18n.t('template_tool.settinhs_browser_view_desc'),
+                           id: 'browser-view-setting',
+                           mapping: [
+                                   {selector: '[data-type="structure"]', category: 'style', key: 'max-width'},
+                           ]
+                   }
+        %>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+<%= render :partial => 'web/template_builder/content_templates/text_1' %>
+<%= render :partial => 'web/template_builder/content_templates/image_1' %>
+<%= render :partial => 'web/template_builder/content_templates/button_1' %>
+<%= render :partial => 'web/template_builder/content_templates/divider_1' %>
+<%= render :partial => 'web/template_builder/content_templates/social_1' %>
+<%= render :partial => 'web/template_builder/content_templates/code_1' %>
+<%= render :partial => 'web/template_builder/content_templates/text_browser_view_1' %>
+
+<%= render :partial => 'web/template_builder/layout_templates/single' %>
+<%= render :partial => 'web/template_builder/layout_templates/2-2-center' %>
+<%= render :partial => 'web/template_builder/layout_templates/3-3' %>
+<%= render :partial => 'web/template_builder/layout_templates/2-2-nr' %>
+<%= render :partial => 'web/template_builder/layout_templates/3-3-nr' %>
